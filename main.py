@@ -5,7 +5,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/proxy')
 def hello():
   response = requests.get('https://www.proxyscan.io/api/proxy?ping=100')
   jsons = json.loads(response.text)
